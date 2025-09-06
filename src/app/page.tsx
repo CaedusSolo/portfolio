@@ -2,7 +2,8 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Intro from "../components/Intro";
-import Projects from "../components/Projects.tsx";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <main className="min-h-screen flex flex-col w-full items-center justify-center mx-auto">
         <Intro />
         <Projects />
+        <Skills />
       </main>
       <Footer />
     </>
