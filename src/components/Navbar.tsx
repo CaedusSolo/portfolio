@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-slate-600 sticky top-0">
-      <div className="w-full flex justify-between items-center h-16 border-4 px-4 sm:px-6 lg:px-8">
+      <div className="w-full flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8">
         <Image src="/next.svg" width={80} height={80} alt="next logo" />
         <div className="flex space-x-6">
           <Link href="/">Home</Link>
