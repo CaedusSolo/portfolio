@@ -7,13 +7,12 @@ export default function Intro() {
   const [showH2, setShowH2] = useState(false);
 
   useEffect(() => {
-    // Match timing with h1 typing (words.length × typeSpeed + a buffer)
     const timer = setTimeout(() => setShowH2(true), 2500);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="w-9/12 flex justify-between items-center">
+    <div className="w-9/12 flex justify-between items-center h-screen">
       <div>
         {/* H1 */}
         <h1 className="text-4xl">

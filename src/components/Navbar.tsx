@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-slate-600 sticky top-0">
+    <nav className="w-full bg-slate-600 sticky top-0 z-100">
       <div className="w-full flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8">
         <Image src="/next.svg" width={80} height={80} alt="next logo" />
         <div className="flex space-x-6">
