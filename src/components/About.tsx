@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Timeline from "./Timeline"; // assuming you have your timeline component
+import Timeline from "./Timeline";
 
 export default function About() {
   return (
     <section className="w-10/12 mx-auto py-12 space-y-12">
       {/* Heading */}
       <motion.h1
-        className="text-center font-bold text-6xl"
+        className="text-center mt-4 font-bold text-6xl"
         initial={{ x: -200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
