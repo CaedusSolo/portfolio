@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function Skills() {
   return (
-    <div className="w-8/12 flex flex-col justify-center items-center py-10 gap-y-10">
+    <div
+      className="w-8/12 flex flex-col justify-center items-center py-10 gap-y-10"
+      id="skills"
+    >
       <h1 className="text-center font-bold text-4xl">My Skills</h1>
       <div className="flex items-center justify-center w-full mx-auto">
         <div className="w-full mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 gap-16 text-center">

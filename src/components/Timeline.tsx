@@ -49,7 +49,7 @@ export default function Timeline() {
                   <div
                     className="absolute h-1 bg-indigo-600 z-10"
                     style={{
-                      width: "calc(50% + 1rem)",
+                      width: "calc(50% + 2rem)",
                       right: "50%",
                     }}
                   ></div>
@@ -68,7 +68,7 @@ export default function Timeline() {
                   <div
                     className="absolute h-1 bg-indigo-600 z-10"
                     style={{
-                      width: "calc(50% + 1rem)",
+                      width: "calc(50% + 2rem)",
                       left: "50%",
                     }}
                   ></div>
