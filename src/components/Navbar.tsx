@@ -13,8 +13,9 @@ export default function Navbar() {
         <Image src="/next.svg" width={80} height={80} alt="next logo" />
         <div className="flex space-x-6">
           <Link href="/">Home</Link>
-          <Link href="/work">Work</Link>
           <Link href="/projects">Projects</Link>
+          <Link href="/skills">Skills</Link>
+          <Link href="/contact">Contact</Link>
         </div>
       </div>
     </nav>

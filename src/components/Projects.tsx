@@ -21,7 +21,7 @@ const projects = [
     title: "Well of Wisdom",
     description:
       "A bookstore web application for university students. Built with HTML, Bootstrap, Flask.",
-    image: "/images/wellOfWisdom.jpg",
+    image: "/images/wellOfWisdom.jpeg",
     link: "https://caedussolo.pythonanywhere.com/views/home",
   },
   {

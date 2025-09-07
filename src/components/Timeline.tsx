@@ -40,20 +40,38 @@ export default function Timeline() {
                   <span className="text-indigo-600 font-bold">{item.year}</span>
                   <p className="mt-2 text-gray-700">{item.details}</p>
                 </div>
-                {/* Line & Dot */}
+                {/* Line & Dot & Connector */}
                 <div className="relative col-span-1 flex justify-center items-center">
-                  <div className="h-full w-1 bg-indigo-600"></div>
-                  <div className="absolute w-4 h-4 bg-indigo-600 rounded-full"></div>
+                  <div className="h-full w-1 bg-indigo-600 absolute left-1/2 -translate-x-1/2"></div>
+                  {/* Dot (center of the line) */}
+                  <div className="absolute w-4 h-4 bg-indigo-600 rounded-full z-20"></div>
+                  {/* Connector Line to the Left, originating from the dot */}
+                  <div
+                    className="absolute h-1 bg-indigo-600 z-10"
+                    style={{
+                      width: "calc(50% + 1rem)",
+                      right: "50%",
+                    }}
+                  ></div>
                 </div>
                 <div className="col-span-4"></div>
               </>
             ) : (
               <>
                 <div className="col-span-4"></div>
-                {/* Line & Dot */}
+                {/* Line & Dot & Connector */}
                 <div className="relative col-span-1 flex justify-center items-center">
-                  <div className="h-full w-1 bg-indigo-600"></div>
-                  <div className="absolute w-4 h-4 bg-indigo-600 rounded-full"></div>
+                  <div className="h-full w-1 bg-indigo-600 absolute left-1/2 -translate-x-1/2"></div>
+                  {/* Dot (center of the line) */}
+                  <div className="absolute w-4 h-4 bg-indigo-600 rounded-full z-20"></div>
+                  {/* Connector Line to the Right, originating from the dot */}
+                  <div
+                    className="absolute h-1 bg-indigo-600 z-10"
+                    style={{
+                      width: "calc(50% + 1rem)",
+                      left: "50%",
+                    }}
+                  ></div>
                 </div>
                 <div className="col-span-4 p-4 rounded-xl shadow-md bg-white">
                   <h3 className="font-semibold text-lg">{item.title}</h3>
