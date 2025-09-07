@@ -6,8 +6,8 @@ export default function Contact() {
   return (
     <section id="contact" className="relative w-full mx-auto py-20 px-20">
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-indigo-950 to-purple-950 opacity-95 z-[-1]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.12),transparent)] animate-pulse z-[-1]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent)] z-[-1]" />
 
       {/* Heading */}
       <motion.h1

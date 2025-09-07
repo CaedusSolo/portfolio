@@ -46,8 +46,8 @@ export default function Projects() {
       className="relative w-full mx-auto py-20 flex flex-col justify-center items-center gap-y-16"
     >
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-950 to-zinc-900 opacity-95 z-[-1]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.1),transparent)] animate-pulse z-[-1]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent)] z-[-1]" />
 
       {/* Heading */}
       <h1

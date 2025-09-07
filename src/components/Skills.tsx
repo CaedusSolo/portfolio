@@ -6,9 +6,8 @@ export default function Skills() {
       className="relative w-full mx-auto px-20 flex flex-col justify-center items-center py-20 gap-y-16"
       id="skills"
     >
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-indigo-950 to-purple-950 opacity-90 z-[-1]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.12),transparent)] animate-pulse z-[-1]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent)] z-[-1]" />
 
       {/* Heading */}
       <h1
@@ -34,11 +33,11 @@ export default function Skills() {
           <i className="devicon-express-original colored text-7xl sm:text-8xl lg:text-9xl mx-auto"></i>
           <i className="devicon-tailwindcss-original colored text-7xl sm:text-8xl lg:text-9xl mx-auto"></i>
           <i className="devicon-python-plain colored text-7xl sm:text-8xl lg:text-9xl mx-auto"></i>
-          <i className="devicon-flask-original-wordmark colored text-7xl sm:text-8xl lg:text-9xl mx-auto"></i>
+          <i className="devicon-flask-original colored text-7xl sm:text-8xl lg:text-9xl mx-auto"></i>
           <i className="devicon-fastapi-plain-wordmark colored text-7xl sm:text-8xl lg:text-9xl mx-auto"></i>
           <i className="devicon-neovim-plain colored text-7xl sm:text-8xl lg:text-9xl mx-auto"></i>
           <i className="devicon-git-plain colored text-7xl sm:text-8xl lg:text-9xl mx-auto"></i>
-          <i className="devicon-cplusplus-plain text-7xl sm:text-8xl lg:text-9xl mx-auto"></i>
+          <i className="devicon-cplusplus-plain colored text-7xl sm:text-8xl lg:text-9xl mx-auto"></i>
         </div>
       </div>
     </section>

@@ -3,8 +3,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900/90 backdrop-blur-md border-t border-gray-700 py-8">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="bg-gray-900/80 backdrop-blur-md shadow-lg border-t border-gray-800 py-8 relative">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-purple-500/10 to-pink-500/10 blur-3xl opacity-60 pointer-events-none" />
+      <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Logo / Brand */}
         <Link
           href="#home"
@@ -14,21 +15,20 @@ export default function Footer() {
         </Link>
 
         {/* Links */}
-        <div className="flex flex-wrap justify-center gap-8 text-gray-300 text-lg font-medium">
-          <Link href="#about" className="hover:text-white transition">
+        <div className="flex flex-wrap justify-center gap-6 text-gray-300 text-lg font-medium">
+          <Link href="#about" className="hover:text-cyan-400 transition">
             About
           </Link>
-          <Link href="#education" className="hover:text-white transition">
+          <Link href="#education" className="hover:text-cyan-400 transition">
             Education
           </Link>
-
-          <Link href="#skills" className="hover:text-white transition">
-            Skills
-          </Link>
-          <Link href="#projects" className="hover:text-white transition">
+          <Link href="#projects" className="hover:text-purple-400 transition">
             Projects
           </Link>
-          <Link href="#contact" className="hover:text-white transition">
+          <Link href="#skills" className="hover:text-cyan-400 transition">
+            Skills
+          </Link>
+          <Link href="#contact" className="hover:text-pink-400 transition">
             Contact
           </Link>
         </div>
