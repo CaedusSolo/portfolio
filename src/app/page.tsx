@@ -6,6 +6,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import Education from "../components/Education";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="min-h-screen flex flex-col w-full items-center justify-center mx-auto">
         <Intro />
         <About />
+        <Education />
         <Projects />
         <Skills />
         <Contact />

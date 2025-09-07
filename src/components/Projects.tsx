@@ -41,39 +41,61 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div
-      className="w-10/12 flex flex-col justify-center items-center py-6 gap-y-10"
+    <section
       id="projects"
+      className="relative w-full mx-auto py-20 flex flex-col justify-center items-center gap-y-16"
     >
-      <h1 className="text-center font-bold text-4xl mt-4">My Projects</h1>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Background Glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-950 to-zinc-900 opacity-95 z-[-1]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.1),transparent)] animate-pulse z-[-1]" />
+
+      {/* Heading */}
+      <h1
+        className="text-center font-extrabold text-5xl md:text-6xl tracking-wide 
+    leading-tight md:leading-[1.2]   
+    bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 
+    bg-clip-text text-transparent 
+    drop-shadow-[0_0_15px_rgba(0,255,255,0.4)]"
+      >
+        My Projects
+      </h1>
+
+      {/* Project Grid */}
+      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 w-11/12 max-w-7xl">
         {projects.map((project, index) => (
           <a
             key={index}
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+            className="group flex flex-col rounded-2xl overflow-hidden 
+              bg-black/40 border border-cyan-400/20 backdrop-blur-sm 
+              shadow-[0_0_20px_rgba(0,255,255,0.15)] 
+              hover:shadow-[0_0_30px_rgba(0,255,255,0.35)] 
+              transition-all duration-300 transform hover:scale-[1.02]"
           >
-            <div className="relative w-full h-48">
+            {/* Image */}
+            <div className="relative w-full h-52">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                className="object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
               />
             </div>
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2 text-white">
+
+            {/* Content Below Image */}
+            <div className="p-5 flex flex-col gap-2">
+              <h3 className="text-2xl font-semibold text-cyan-300 drop-shadow-lg">
                 {project.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
+              <p className="text-sm text-gray-300 group-hover:text-gray-100 transition-colors">
                 {project.description}
               </p>
             </div>
           </a>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
