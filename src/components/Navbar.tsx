@@ -1,52 +1,70 @@
 "use client";
-import { useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import Image from "next/image";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    const links = document.querySelectorAll("a.nav-link");
+
+    links.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute("href")?.replace("#", "");
+        const section = document.getElementById(targetId);
+
+        if (section) {
+          const yOffset = -80; // adjust based on navbar height
+          const y =
+            section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      });
+    });
+  }, []);
 
   return (
-    <nav className="w-full bg-slate-600 sticky top-0 z-100">
-      <div className="w-full flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8">
-        <Image src="/next.svg" width={80} height={80} alt="next logo" />
-        <div className="flex space-x-6">
-          <Link
-            href="/"
-            className="text-white hover:text-indigo-400"
-            onClick={(e) => {
-              e.preventDefault();
-              const section = document.querySelector("#about");
-              const yOffset = -80;
-              const y =
-                section.getBoundingClientRect().top +
-                window.pageYOffset +
-                yOffset;
+    <nav className="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-md shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <Link
+          href="#home"
+          className="text-2xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(0,255,255,0.5)]"
+        >
+          YT
+        </Link>
 
-              window.scrollTo({ top: y, behavior: "smooth" });
-            }}
+        <div className="flex space-x-8 text-lg font-medium">
+          <Link
+            href="#about"
+            className="nav-link text-gray-300 hover:text-white transition"
           >
-            Home
-          </Link>
-          <Link href="#about" className="text-white hover:text-indigo-400">
             About
           </Link>
-          <Link href="#projects" className="text-white hover:text-indigo-400">
-            Projects
-          </Link>
-          <Link href="#skills" className="text-white hover:text-indigo-400">
-            Skills
-          </Link>
-          <Link href="#contact" className="text-white hover:text-indigo-400">
-            Contact
+
+          <Link
+            href="#education"
+            className="nav-link text-gray-300 hover:text-white transition"
+          >
+            Education
           </Link>
           <Link
-            href="https://google.com"
-            target="_blank"
-            className="text-white hover:text-indigo-400"
+            href="#projects"
+            className="nav-link text-gray-300 hover:text-white transition"
           >
-            Download CV
+            Projects
+          </Link>
+          <Link
+            href="#skills"
+            className="nav-link text-gray-300 hover:text-white transition"
+          >
+            Skills
+          </Link>
+
+          <Link
+            href="#contact"
+            className="nav-link text-gray-300 hover:text-white transition"
+          >
+            Contact
           </Link>
         </div>
       </div>
