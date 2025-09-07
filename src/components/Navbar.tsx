@@ -12,10 +12,21 @@ export default function Navbar() {
       <div className="w-full flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8">
         <Image src="/next.svg" width={80} height={80} alt="next logo" />
         <div className="flex space-x-6">
-          <Link href="/">Home</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/skills">Skills</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/" className="text-white hover:text-indigo-400">
+            Home
+          </Link>
+          <Link href="#about" className="text-white hover:text-indigo-400">
+            About
+          </Link>
+          <Link href="#projects" className="text-white hover:text-indigo-400">
+            Projects
+          </Link>
+          <Link href="#skills" className="text-white hover:text-indigo-400">
+            Skills
+          </Link>
+          <Link href="#contact" className="text-white hover:text-indigo-400">
+            Contact
+          </Link>
         </div>
       </div>
     </nav>
