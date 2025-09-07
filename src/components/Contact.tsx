@@ -4,7 +4,7 @@ import { Mail, Linkedin, Github } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section className="w-10/12 mx-auto py-16">
+    <section className="w-10/12 mx-auto py-16" id="contact">
       <motion.h1
         className="text-5xl font-bold text-center mb-8"
         initial={{ opacity: 0, y: 40 }}

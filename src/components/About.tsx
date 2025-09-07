@@ -5,7 +5,7 @@ import Timeline from "./Timeline";
 
 export default function About() {
   return (
-    <section className="w-10/12 mx-auto py-12 space-y-12">
+    <section className="w-10/12 mx-auto py-12 space-y-12" id="about">
       {/* Heading */}
       <motion.h1
         className="text-center mt-4 font-bold text-6xl"

@@ -21,7 +21,7 @@ const projects = [
     title: "Well of Wisdom",
     description:
       "A bookstore web application for university students. Built with HTML, Bootstrap, Flask.",
-    image: "/images/wellOfWisdom.jpg",
+    image: "/images/wellOfWisdom.jpeg",
     link: "https://caedussolo.pythonanywhere.com/views/home",
   },
   {
@@ -41,7 +41,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="w-10/12 flex flex-col justify-center items-center py-6 gap-y-10">
+    <div
+      className="w-10/12 flex flex-col justify-center items-center py-6 gap-y-10"
+      id="projects"
+    >
       <h1 className="text-center font-bold text-4xl mt-4">My Projects</h1>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
