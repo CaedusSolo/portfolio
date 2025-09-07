@@ -25,7 +25,7 @@ export default function Timeline() {
   ];
 
   return (
-    <section id="education" className="relative w-full mx-auto py-20 px-16">
+    <section id="education" className="relative w-full mx-auto py-20 px-20">
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent)] z-[-1]" />
@@ -63,12 +63,12 @@ export default function Timeline() {
                 {/* Connector + Dot */}
                 <div className="relative col-span-1 flex justify-center items-center">
                   {/* Vertical Line */}
-                  <div className="h-full w-1 bg-gradient-to-b from-cyan-400 to-purple-500 absolute left-1/2 -translate-x-1/2" />
+                  <div className="h-full w-1 bg-pink-500 absolute left-1/2 -translate-x-1/2" />
                   {/* Glowing Dot */}
-                  <div className="absolute w-5 h-5 bg-cyan-400 rounded-full shadow-[0_0_18px_5px_rgba(0,255,255,0.5)] z-20" />
+                  <div className="absolute w-5 h-5 bg-pink-500 rounded-full z-20" />
                   {/* Horizontal Connector */}
                   <div
-                    className="absolute h-1 bg-gradient-to-r from-cyan-400 to-purple-500 z-10"
+                    className="absolute h-1 bg-pink-500 z-10"
                     style={{ width: "calc(50% + 2rem)", right: "50%" }}
                   />
                 </div>
@@ -81,10 +81,10 @@ export default function Timeline() {
 
                 {/* Connector + Dot */}
                 <div className="relative col-span-1 flex justify-center items-center">
-                  <div className="h-full w-1 bg-gradient-to-b from-pink-500 to-purple-500 absolute left-1/2 -translate-x-1/2" />
+                  <div className="h-full w-1 bg-pink-500 absolute left-1/2 -translate-x-1/2" />
                   <div className="absolute w-5 h-5 bg-pink-500 rounded-full shadow-[0_0_18px_5px_rgba(255,0,128,0.5)] z-20" />
                   <div
-                    className="absolute h-1 bg-gradient-to-r from-purple-500 to-pink-500 z-10"
+                    className="absolute h-1 bg-pink-500 z-10"
                     style={{ width: "calc(50% + 2rem)", left: "50%" }}
                   />
                 </div>

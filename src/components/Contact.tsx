@@ -39,21 +39,21 @@ export default function Contact() {
           <div className="flex flex-col gap-4">
             <a
               href="mailto:yingtong0106@gmail.com"
-              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors"
+              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors w-6/12"
             >
               <Mail /> yingtong0106@gmail.com
             </a>
             <a
               href="https://www.linkedin.com/in/ying-tong-chow-6164a0239/"
               target="_blank noreferrer"
-              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors"
+              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors w-6/12"
             >
               <Linkedin /> LinkedIn
             </a>
             <a
               href="https://github.com/CaedusSolo"
               target="_blank noreferrer"
-              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors"
+              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors w-6/12"
             >
               <Github /> GitHub
             </a>
@@ -63,7 +63,7 @@ export default function Contact() {
         {/* Right - Form */}
         <motion.form
           className="space-y-4 bg-black/40 backdrop-blur-md border border-cyan-400/40 
-          shadow-[0_0_30px_rgba(0,255,255,0.2)] rounded-2xl p-8 text-cyan-100"
+          shadow-[0_0_10px_rgba(0,255,255,0.2)] rounded-2xl p-8 text-cyan-100"
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -109,9 +109,9 @@ export default function Contact() {
             type="submit"
             className="w-full py-3 font-bold text-lg rounded-lg 
             bg-purple-500
-            text-white shadow-[0_0_20px_rgba(0,255,255,0.5)] 
-            hover:shadow-[0_0_30px_rgba(255,0,255,0.6)] 
-            transition-all duration-300"
+            text-white 
+            hover:shadow-[0_0_12px_rgba(255,0,255,0.6)] 
+            transition-all duration-300 cursor-pointer"
           >
             Send Message
           </button>

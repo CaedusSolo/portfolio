@@ -41,7 +41,7 @@ export default function Intro() {
         {/* Reserve width so the image doesn’t shift */}
         <div className="h-14 md:h-16 mt-4 w-[250px] md:w-[350px]">
           {showName && (
-            <h1 className="text-5xl md:text-6xl font-body font-bold text-cyan-400">
+            <h1 className="text-5xl md:text-6xl font-body font-bold text-pink-500">
               <Typewriter
                 words={["Ying Tong"]}
                 loop={1}
@@ -70,7 +70,7 @@ export default function Intro() {
         </div>
 
         {/* CTA Button */}
-        <button className="mt-8 px-6 py-3 text-lg font-semibold rounded-lg border border-cyan-400 text-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(56,189,248,0.7)] transition-all cursor-pointer">
+        <button className="mt-8 px-6 py-3 text-lg font-semibold rounded-lg border border-cyan-400 text-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_10px_rgba(56,189,248,0.7)] transition-all cursor-pointer">
           <Link href="#projects">View My Work</Link>
         </button>
       </div>

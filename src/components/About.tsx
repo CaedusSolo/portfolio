@@ -32,7 +32,7 @@ export default function About() {
         transition={{ duration: 1.2, delay: 0.6 }}
       >
         <p>
-          Hi, I'm <span className="font-bold text-cyan-300">CaedusSolo</span>, a
+          Hi, I'm <span className="font-bold text-cyan-300">Ying Tong</span>, a
           2nd Year Computer Science student at Multimedia University,
           specializing in Software Engineering. I'm always eager to broaden my
           horizons and push myself to learn more as I navigate the journey that
@@ -56,9 +56,8 @@ export default function About() {
         </p>
         <br />
         <p>
-          Outside of programming, you'll find me{" "}
-          <span className="italic text-purple-300">reading novels</span> or
-          enjoying <span className="italic text-pink-400">rhythm games</span>.
+          Outside of programming, you'll find me reading novels or enjoying
+          rhythm games.
         </p>
       </motion.div>
     </section>
