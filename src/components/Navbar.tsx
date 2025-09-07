@@ -66,6 +66,14 @@ export default function Navbar() {
           >
             Contact
           </Link>
+
+          <Link
+            href="https://google.com"
+            target="_blank"
+            className="nav-link text-gray-300 hover:text-white transition"
+          >
+            Download CV
+          </Link>
         </div>
       </div>
     </nav>

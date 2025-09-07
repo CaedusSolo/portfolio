@@ -2,13 +2,20 @@
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Intro() {
-  const [showH2, setShowH2] = useState(false);
+  const [showName, setShowName] = useState(false);
+  const [showH3, setShowH3] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowH2(true), 2500);
+    const timer = setTimeout(() => setShowName(true), 2500);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const h3Timer = setTimeout(() => setShowH3(true), 4000);
+    return () => clearTimeout(h3Timer);
   }, []);
 
   return (
@@ -20,37 +27,51 @@ export default function Intro() {
       {/* Left Section */}
       <div className="text-center md:text-left max-w-xl">
         {/* H1 */}
-        <h1 className="text-5xl md:text-6xl font-heading font-bold tracking-wide">
-          <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent drop-shadow-md">
+        <h1 className="text-3xl md:text-6xl font-heading font-bold tracking-wide">
+          <span className="bg-indigo-400 bg-clip-text text-transparent drop-shadow-md">
             <Typewriter
-              words={["Hello, I'm CaedusSolo"]}
+              words={["Hello, I'm"]}
               loop={1}
-              cursor
-              cursorStyle="▌"
               typeSpeed={70}
               deleteSpeed={0}
             />
           </span>
         </h1>
 
-        {/* H2 */}
-        {showH2 && (
-          <h2 className="text-2xl md:text-3xl mt-4 font-body font-medium text-slate-200">
-            <Typewriter
-              words={["Software Engineer", "Student", "Learner"]}
-              loop={Infinity}
-              cursor
-              cursorStyle="▌"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1500}
-            />
-          </h2>
-        )}
+        {/* Reserve width so the image doesn’t shift */}
+        <div className="h-14 md:h-16 mt-4 w-[250px] md:w-[350px]">
+          {showName && (
+            <h1 className="text-3xl md:text-3xl font-body font-bold text-cyan-400">
+              <Typewriter
+                words={["Ying Tong"]}
+                loop={1}
+                cursor={false}
+                typeSpeed={70}
+              />
+            </h1>
+          )}
+        </div>
+
+        {/* H3 */}
+        <div className="h-12 md:h-16 mt-4 w-[250px] md:w-[350px]">
+          {showH3 && (
+            <h2 className="text-2xl md:text-3xl font-body font-medium text-slate-200">
+              <Typewriter
+                words={["Student", "Developer", "Learner"]}
+                loop={Infinity}
+                cursor
+                cursorStyle="▌"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={3000}
+              />
+            </h2>
+          )}
+        </div>
 
         {/* CTA Button */}
-        <button className="mt-8 px-6 py-3 text-lg font-semibold rounded-lg border border-cyan-400 text-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(56,189,248,0.7)] transition-all">
-          View My Work
+        <button className="mt-8 px-6 py-3 text-lg font-semibold rounded-lg border border-cyan-400 text-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(56,189,248,0.7)] transition-all cursor-pointer">
+          <Link href="#projects">View My Work</Link>
         </button>
       </div>
 

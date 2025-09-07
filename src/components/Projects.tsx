@@ -53,9 +53,9 @@ export default function Projects() {
       <h1
         className="text-center font-extrabold text-5xl md:text-6xl tracking-wide 
     leading-tight md:leading-[1.2]   
-    bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 
-    bg-clip-text text-transparent 
-    drop-shadow-[0_0_15px_rgba(0,255,255,0.4)]"
+    bg-purple-500 
+        bg-clip-text text-transparent 
+    "
       >
         My Projects
       </h1>

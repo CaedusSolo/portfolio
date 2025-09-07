@@ -12,16 +12,15 @@ export default function Skills() {
       {/* Heading */}
       <h1
         className="text-center font-extrabold text-5xl md:text-6xl tracking-wide 
-        leading-[1.2] md:leading-[1.3] 
-        bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 
-        bg-clip-text text-transparent 
-        drop-shadow-[0_0_20px_rgba(0,255,255,0.5)] pb-3"
+        bg-purple-500
+        bg-clip-text text-transparent md:leading-[1.2] 
+        mb-12"
       >
         My Skills
       </h1>
 
       {/* Grid */}
-      <div className="w-full mx-auto">
+      <div className="w-full mx-auto pb-6">
         <div
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 
           gap-12 sm:gap-16 lg:gap-20 text-center"

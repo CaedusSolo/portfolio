@@ -31,13 +31,13 @@ export default function Timeline() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent)] z-[-1]" />
 
       {/* Heading */}
-      <h2
+      <h1
         className="text-4xl md:text-5xl font-extrabold text-center mb-16 
       bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 
-      bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(0,255,255,0.4)] tracking-tight"
+      bg-clip-text text-transparent tracking-tight"
       >
         Education
-      </h2>
+      </h1>
 
       {/* Timeline Grid */}
       <div className="relative flex flex-col space-y-16 md:space-y-0 md:grid md:grid-cols-9 md:gap-x-8">

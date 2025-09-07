@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900/80 backdrop-blur-md shadow-lg border-t border-gray-800 py-8 relative">
+    <footer className="bg-gray-900 backdrop-blur-md shadow-lg border-t border-gray-800 py-8 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-purple-500/10 to-pink-500/10 blur-3xl opacity-60 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Logo / Brand */}
@@ -30,6 +30,12 @@ export default function Footer() {
           </Link>
           <Link href="#contact" className="hover:text-pink-400 transition">
             Contact
+          </Link>
+          <Link
+            href="https://google.com"
+            className="hover:text-pink-400 transition"
+          >
+            Download CV
           </Link>
         </div>
 
