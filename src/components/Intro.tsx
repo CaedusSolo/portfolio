@@ -41,7 +41,7 @@ export default function Intro() {
         {/* Reserve width so the image doesn’t shift */}
         <div className="h-14 md:h-16 mt-4 w-[250px] md:w-[350px]">
           {showName && (
-            <h1 className="text-3xl md:text-3xl font-body font-bold text-cyan-400">
+            <h1 className="text-5xl md:text-6xl font-body font-bold text-cyan-400">
               <Typewriter
                 words={["Ying Tong"]}
                 loop={1}
@@ -53,7 +53,7 @@ export default function Intro() {
         </div>
 
         {/* H3 */}
-        <div className="h-12 md:h-16 mt-4 w-[250px] md:w-[350px]">
+        <div className="h-12 md:h-16 mt-8 w-[250px] md:w-[350px]">
           {showH3 && (
             <h2 className="text-2xl md:text-3xl font-body font-medium text-slate-200">
               <Typewriter
