@@ -12,7 +12,21 @@ export default function Navbar() {
       <div className="w-full flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8">
         <Image src="/next.svg" width={80} height={80} alt="next logo" />
         <div className="flex space-x-6">
-          <Link href="/" className="text-white hover:text-indigo-400">
+          <Link
+            href="/"
+            className="text-white hover:text-indigo-400"
+            onClick={(e) => {
+              e.preventDefault();
+              const section = document.querySelector("#about");
+              const yOffset = -80;
+              const y =
+                section.getBoundingClientRect().top +
+                window.pageYOffset +
+                yOffset;
+
+              window.scrollTo({ top: y, behavior: "smooth" });
+            }}
+          >
             Home
           </Link>
           <Link href="#about" className="text-white hover:text-indigo-400">
@@ -26,6 +40,13 @@ export default function Navbar() {
           </Link>
           <Link href="#contact" className="text-white hover:text-indigo-400">
             Contact
+          </Link>
+          <Link
+            href="https://google.com"
+            target="_blank"
+            className="text-white hover:text-indigo-400"
+          >
+            Download CV
           </Link>
         </div>
       </div>
