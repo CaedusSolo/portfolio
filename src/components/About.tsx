@@ -13,7 +13,7 @@ export default function About() {
       {/* Heading */}
       <motion.h1
         className="text-center font-extrabold text-5xl md:text-6xl tracking-tight mb-8
-        bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 
+        bg-purple-500 
         bg-clip-text text-transparent "
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

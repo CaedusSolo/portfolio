@@ -16,16 +16,16 @@ export default function Footer() {
 
         {/* Links */}
         <div className="flex flex-wrap justify-center gap-6 text-gray-300 text-lg font-medium">
-          <Link href="#about" className="hover:text-cyan-400 transition">
+          <Link href="#about" className="hover:text-pink-400 transition">
             About
           </Link>
-          <Link href="#education" className="hover:text-cyan-400 transition">
+          <Link href="#education" className="hover:text-pink-400 transition">
             Education
           </Link>
-          <Link href="#projects" className="hover:text-purple-400 transition">
+          <Link href="#projects" className="hover:text-pink-400 transition">
             Projects
           </Link>
-          <Link href="#skills" className="hover:text-cyan-400 transition">
+          <Link href="#skills" className="hover:text-pink-400 transition">
             Skills
           </Link>
           <Link href="#contact" className="hover:text-pink-400 transition">
@@ -33,6 +33,7 @@ export default function Footer() {
           </Link>
           <Link
             href="https://google.com"
+            target="_blank"
             className="hover:text-pink-400 transition"
           >
             Download CV

@@ -57,7 +57,7 @@ export default function Projects() {
         bg-clip-text text-transparent 
     "
       >
-        My Projects
+        Featured Projects
       </h1>
 
       {/* Project Grid */}

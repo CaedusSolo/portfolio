@@ -13,7 +13,7 @@ export default function Navbar() {
         const section = document.getElementById(targetId);
 
         if (section) {
-          const yOffset = -80; // adjust based on navbar height
+          const yOffset = -80;
           const y =
             section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
