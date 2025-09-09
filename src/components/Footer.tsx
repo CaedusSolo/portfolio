@@ -15,7 +15,7 @@ export default function Footer() {
         </Link>
 
         {/* Links */}
-        <div className="flex flex-wrap justify-center gap-6 text-gray-300 text-lg font-medium">
+        <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-6 text-sm sm:text-base lg:text-lg font-medium text-gray-300">
           <Link href="#about" className="hover:text-pink-400 transition">
             About
           </Link>
@@ -32,11 +32,12 @@ export default function Footer() {
             Contact
           </Link>
           <Link
-            href="https://google.com"
+            href="/Resume.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-pink-400 transition"
           >
-            Download CV
+            View Resume/CV
           </Link>
         </div>
 

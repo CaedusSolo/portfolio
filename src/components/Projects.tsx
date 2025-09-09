@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Image from "next/image";
 
 const projects = [
@@ -16,7 +15,6 @@ const projects = [
     image: "/images/takeFlight.png",
     link: "https://www.npmjs.com/package/take-flight-cli",
   },
-
   {
     title: "Well of Wisdom",
     description:
@@ -43,7 +41,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative w-full mx-auto py-20 flex flex-col justify-center items-center gap-y-16"
+      className="relative w-full mx-auto py-16 sm:py-20 px-4 sm:px-6 lg:px-20 flex flex-col justify-center items-center gap-y-12 sm:gap-y-16"
     >
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
@@ -51,17 +49,16 @@ export default function Projects() {
 
       {/* Heading */}
       <h1
-        className="text-center font-extrabold text-5xl md:text-6xl tracking-wide 
-    leading-tight md:leading-[1.2]   
-    bg-purple-500 
-        bg-clip-text text-transparent 
-    "
+        className="text-center font-extrabold text-3xl sm:text-4xl md:text-6xl tracking-wide 
+        leading-tight md:leading-[1.2] 
+        bg-purple-500 
+        bg-clip-text text-transparent"
       >
         Featured Projects
       </h1>
 
       {/* Project Grid */}
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 w-11/12 max-w-7xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 w-full max-w-7xl">
         {projects.map((project, index) => (
           <a
             key={index}
@@ -75,7 +72,7 @@ export default function Projects() {
               transition-all duration-300 transform hover:scale-[1.02]"
           >
             {/* Image */}
-            <div className="relative w-full h-52">
+            <div className="relative w-full h-40 sm:h-52 md:h-60">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -86,10 +83,10 @@ export default function Projects() {
 
             {/* Content Below Image */}
             <div className="p-5 flex flex-col gap-2">
-              <h3 className="text-2xl font-semibold text-cyan-300 drop-shadow-lg">
+              <h3 className="text-xl sm:text-2xl font-semibold text-cyan-300 drop-shadow-lg">
                 {project.title}
               </h3>
-              <p className="text-sm text-gray-300 group-hover:text-gray-100 transition-colors">
+              <p className="text-sm sm:text-base text-gray-300 group-hover:text-gray-100 transition-colors">
                 {project.description}
               </p>
             </div>
