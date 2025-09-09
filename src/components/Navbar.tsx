@@ -88,12 +88,12 @@ export default function Navbar() {
                 Contact
               </Link>
               <a
-                href="https://google.com"
+                href="/Resume.pdf"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition"
               >
-                Download CV
+                View Resume/CV
               </a>
             </div>
 

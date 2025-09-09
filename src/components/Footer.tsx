@@ -32,11 +32,12 @@ export default function Footer() {
             Contact
           </Link>
           <Link
-            href="https://google.com"
+            href="/Resume.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-pink-400 transition"
           >
-            Download CV
+            View Resume/CV
           </Link>
         </div>
 
