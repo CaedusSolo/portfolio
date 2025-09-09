@@ -4,17 +4,18 @@ import { Mail, Linkedin, Github } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative w-full mx-auto py-20 px-20">
+    <section
+      id="contact"
+      className="relative w-full mx-auto py-16 sm:py-20 px-4 sm:px-6 lg:px-20"
+    >
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent)] z-[-1]" />
 
       {/* Heading */}
       <motion.h1
-        className="text-center font-extrabold text-5xl md:text-6xl tracking-wide 
-        bg-purple-500
-        bg-clip-text text-transparent 
-        mb-12"
+        className="text-center font-extrabold text-3xl sm:text-4xl md:text-6xl tracking-wide 
+        bg-purple-500 bg-clip-text text-transparent mb-10 sm:mb-12"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -23,10 +24,10 @@ export default function Contact() {
       </motion.h1>
 
       {/* Grid Layout */}
-      <div className="grid md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
         {/* Left - Info */}
         <motion.div
-          className="space-y-6 flex flex-col justify-center text-lg text-cyan-100"
+          className="space-y-6 flex flex-col justify-center text-base sm:text-lg text-cyan-100"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -39,23 +40,25 @@ export default function Contact() {
           <div className="flex flex-col gap-4">
             <a
               href="mailto:yingtong0106@gmail.com"
-              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors w-6/12"
+              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors w-full sm:w-10/12 md:w-6/12"
             >
-              <Mail /> yingtong0106@gmail.com
+              <Mail className="shrink-0" /> yingtong0106@gmail.com
             </a>
             <a
               href="https://www.linkedin.com/in/ying-tong-chow-6164a0239/"
-              target="_blank noreferrer"
-              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors w-6/12"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors w-full sm:w-10/12 md:w-6/12"
             >
-              <Linkedin /> LinkedIn
+              <Linkedin className="shrink-0" /> LinkedIn
             </a>
             <a
               href="https://github.com/CaedusSolo"
-              target="_blank noreferrer"
-              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors w-6/12"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-3 text-cyan-300 hover:text-pink-400 transition-colors w-full sm:w-10/12 md:w-6/12"
             >
-              <Github /> GitHub
+              <Github className="shrink-0" /> GitHub
             </a>
           </div>
         </motion.div>
@@ -63,7 +66,7 @@ export default function Contact() {
         {/* Right - Form */}
         <motion.form
           className="space-y-4 bg-black/40 backdrop-blur-md border border-cyan-400/40 
-          shadow-[0_0_10px_rgba(0,255,255,0.2)] rounded-2xl p-8 text-cyan-100"
+          shadow-[0_0_10px_rgba(0,255,255,0.2)] rounded-2xl p-6 sm:p-8 md:p-10 text-cyan-100"
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -108,8 +111,7 @@ export default function Contact() {
           <button
             type="submit"
             className="w-full py-3 font-bold text-lg rounded-lg 
-            bg-purple-500
-            text-white 
+            bg-purple-500 text-white 
             hover:shadow-[0_0_12px_rgba(255,0,255,0.6)] 
             transition-all duration-300 cursor-pointer"
           >

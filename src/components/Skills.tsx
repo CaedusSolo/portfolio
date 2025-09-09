@@ -42,7 +42,7 @@ export default function Skills() {
 
       {/* Grid of skill cards */}
       <div className="w-full mx-auto pb-6">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-12 text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 sm:gap-10 lg:gap-12 text-center">
           {skills.map((skill, index) => (
             <div
               key={index}

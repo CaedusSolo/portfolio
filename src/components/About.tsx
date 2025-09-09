@@ -1,20 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Timeline from "./Timeline";
 
 export default function About() {
   return (
-    <section id="about" className="relative w-full mx-auto py-20">
+    <section
+      id="about"
+      className="relative w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
+    >
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent)] z-[-1]" />
 
       {/* Heading */}
       <motion.h1
-        className="text-center font-extrabold text-5xl md:text-6xl tracking-tight mb-8
-        bg-purple-500 
-        bg-clip-text text-transparent "
+        className="text-center font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-tight mb-8
+        bg-purple-500 bg-clip-text text-transparent"
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -24,9 +25,9 @@ export default function About() {
 
       {/* Content Box */}
       <motion.div
-        className="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed font-light 
-        text-gray-200 bg-black/40 rounded-2xl p-8 border border-cyan-400/30 
-        shadow-[0_0_25px_rgba(0,255,255,0.2)] backdrop-blur-sm"
+        className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed font-light 
+        text-gray-200 bg-black/40 rounded-2xl p-6 sm:p-8 md:p-10 
+        border border-cyan-400/30 shadow-[0_0_25px_rgba(0,255,255,0.2)] backdrop-blur-sm"
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.6 }}
