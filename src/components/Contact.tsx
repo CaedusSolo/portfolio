@@ -1,8 +1,48 @@
 "use client";
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github } from "lucide-react";
+import { useRef, useState } from "react";
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null); // 🔹 ref for form
+  const [status, setStatus] = useState<null | "success" | "error">(null);
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus(null);
+    setLoading(true);
+
+    if (!formRef.current) return; // safety check
+
+    const formData = new FormData(formRef.current);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        formRef.current.reset(); // ✅ clear form reliably
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
+
+    setLoading(false);
+  }
+
   return (
     <section
       id="contact"
@@ -65,21 +105,20 @@ export default function Contact() {
 
         {/* Right - Form */}
         <motion.form
+          ref={formRef} // 🔹 attach ref
           className="space-y-4 bg-black/40 backdrop-blur-md border border-cyan-400/40 
           shadow-[0_0_10px_rgba(0,255,255,0.2)] rounded-2xl p-6 sm:p-8 md:p-10 text-cyan-100"
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("This doesn't work yet, will add it later");
-          }}
+          onSubmit={handleSubmit}
         >
           <div>
             <label className="block text-left text-cyan-300 font-medium">
               Name
             </label>
             <input
+              name="name"
               type="text"
               className="w-full bg-black/30 border border-cyan-400/40 rounded-lg p-3 
               focus:outline-none focus:ring-2 focus:ring-cyan-400"
@@ -91,6 +130,7 @@ export default function Contact() {
               Email
             </label>
             <input
+              name="email"
               type="email"
               className="w-full bg-black/30 border border-cyan-400/40 rounded-lg p-3 
               focus:outline-none focus:ring-2 focus:ring-cyan-400"
@@ -102,6 +142,7 @@ export default function Contact() {
               Message
             </label>
             <textarea
+              name="message"
               rows={5}
               className="w-full bg-black/30 border border-cyan-400/40 rounded-lg p-3 
               focus:outline-none focus:ring-2 focus:ring-cyan-400"
@@ -110,13 +151,26 @@ export default function Contact() {
           </div>
           <button
             type="submit"
+            disabled={loading}
             className="w-full py-3 font-bold text-lg rounded-lg 
             bg-purple-500 text-white 
             hover:shadow-[0_0_12px_rgba(255,0,255,0.6)] 
-            transition-all duration-300 cursor-pointer"
+            transition-all duration-300 cursor-pointer disabled:opacity-60"
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"}
           </button>
+
+          {/* Success/Error Message */}
+          {status === "success" && (
+            <p className="text-green-400 text-center mt-3">
+              Message sent successfully!
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-red-400 text-center mt-3">
+              Something went wrong. Please try again.
+            </p>
+          )}
         </motion.form>
       </div>
     </section>
