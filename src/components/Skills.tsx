@@ -14,12 +14,14 @@ export default function Skills() {
     { icon: "devicon-fastapi-plain colored", label: "FastAPI" },
     { icon: "devicon-cplusplus-plain colored", label: "C++" },
     { icon: "devicon-git-plain colored", label: "Git" },
-    { icon: "devicon-neovim-plain colored", label: "Neovim" },
     { icon: "devicon-supabase-plain colored", label: "Supabase" },
     { icon: "devicon-firebase-plain colored", label: "Firebase" },
+    { icon: "devicon-sqlalchemy-plain", label: "SQLAlchemy" },
+    { icon: "devicon-sqlite-plain colored", label: "SQLite" },
     { icon: "devicon-wordpress-plain", label: "WordPress" },
     { icon: "devicon-figma-plain colored", label: "Figma" },
     { icon: "devicon-bootstrap-plain colored", label: "Bootstrap" },
+    { icon: "devicon-neovim-plain colored", label: "Neovim" },
   ];
 
   return (
@@ -35,9 +37,9 @@ export default function Skills() {
       <h1
         className="text-center font-extrabold text-5xl md:text-6xl tracking-wide 
         bg-purple-500 bg-clip-text text-transparent md:leading-[1.2] 
-        mb-12"
+        "
       >
-        My Skills
+        Skills
       </h1>
 
       {/* Grid of skill cards */}
