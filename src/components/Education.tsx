@@ -35,8 +35,8 @@ export default function Timeline() {
 
       {/* Heading */}
       <h1
-        className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 sm:mb-16 
-        bg-purple-500 bg-clip-text text-transparent tracking-tight"
+        className="text-center font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-tight mb-8
+        bg-purple-500 bg-clip-text text-transparent"
       >
         Education
       </h1>

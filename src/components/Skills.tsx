@@ -35,7 +35,7 @@ export default function Skills() {
 
       {/* Heading */}
       <h1
-        className="text-center font-extrabold text-5xl md:text-6xl tracking-wide 
+        className="text-center font-extrabold text-5xl md:text-6xl tracking-tight 
         bg-purple-500 bg-clip-text text-transparent md:leading-[1.2] 
         "
       >

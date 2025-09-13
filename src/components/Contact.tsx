@@ -54,7 +54,7 @@ export default function Contact() {
 
       {/* Heading */}
       <motion.h1
-        className="text-center font-extrabold text-3xl sm:text-4xl md:text-6xl tracking-wide 
+        className="text-center font-extrabold text-3xl sm:text-4xl md:text-6xl tracking-tight
         bg-purple-500 bg-clip-text text-transparent mb-10 sm:mb-12"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

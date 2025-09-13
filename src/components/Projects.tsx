@@ -49,7 +49,7 @@ export default function Projects() {
 
       {/* Heading */}
       <h1
-        className="text-center font-extrabold text-3xl sm:text-4xl md:text-6xl tracking-wide 
+        className="text-center font-extrabold text-3xl sm:text-4xl md:text-6xl tracking-tight 
         leading-tight md:leading-[1.2] 
         bg-purple-500 
         bg-clip-text text-transparent"
