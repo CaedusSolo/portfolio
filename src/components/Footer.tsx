@@ -37,7 +37,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:text-pink-400 transition"
           >
-            View Resume/CV
+            Resume/CV
           </Link>
         </div>
 

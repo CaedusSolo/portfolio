@@ -93,7 +93,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition"
               >
-                CV
+                Resume/CV
               </a>
             </div>
 
@@ -177,7 +177,7 @@ export default function Navbar() {
               rel="noreferrer"
               className="block rounded-md px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition"
             >
-              Download CV
+              Resume/CV
             </a>
           </div>
         </div>
