@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="flex h-16 items-center justify-between">
             <Link
               href="#home"
-              className="text-2xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] nav-link"
+              className="text-2xl font-extrabold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent  nav-link"
             >
               YT
             </Link>
@@ -93,7 +93,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition"
               >
-                View Resume/CV
+                CV
               </a>
             </div>
 

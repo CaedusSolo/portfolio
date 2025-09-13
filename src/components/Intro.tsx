@@ -83,7 +83,7 @@ export default function Intro() {
         </button>{" "}
       </div>{" "}
       {/* Right Section - Profile */}{" "}
-      <div className="relative w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden border-2 border-cyan-400 shadow-[0_0_20px_rgba(56,189,248,0.4)]">
+      <div className="relative w-50 h-50 sm:w-56 sm:h-56 rounded-full overflow-hidden border-2 border-cyan-400 shadow-[0_0_20px_rgba(56,189,248,0.4)]">
         {" "}
         <Image
           src="/images/Chow.jpg"
