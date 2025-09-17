@@ -10,7 +10,6 @@ export default function About() {
     >
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent)] z-[-1]" />
 
       {/* Heading */}
       <motion.h1
@@ -27,7 +26,7 @@ export default function About() {
       <motion.div
         className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed font-light 
         text-gray-200 bg-black/40 rounded-2xl p-6 sm:p-8 md:p-10 
-        border border-cyan-400/30 shadow-[0_0_25px_rgba(0,255,255,0.2)] backdrop-blur-sm"
+        border border-cyan-400/30  "
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.6 }}
