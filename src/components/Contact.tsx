@@ -13,7 +13,7 @@ export default function Contact() {
     setStatus(null);
     setLoading(true);
 
-    if (!formRef.current) return; // safety check
+    if (!formRef.current) return;
 
     const formData = new FormData(formRef.current);
     const data = {
@@ -31,7 +31,7 @@ export default function Contact() {
 
       if (res.ok) {
         setStatus("success");
-        formRef.current.reset(); // ✅ clear form reliably
+        formRef.current.reset();
       } else {
         setStatus("error");
       }
@@ -50,7 +50,6 @@ export default function Contact() {
     >
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent)] z-[-1]" />
 
       {/* Heading */}
       <motion.h1
@@ -107,14 +106,14 @@ export default function Contact() {
         <motion.form
           ref={formRef} // 🔹 attach ref
           className="space-y-4 bg-black/40 backdrop-blur-md border border-cyan-400/40 
-          shadow-[0_0_10px_rgba(0,255,255,0.2)] rounded-2xl p-6 sm:p-8 md:p-10 text-cyan-100"
+          rounded-2xl p-6 sm:p-8 md:p-10 text-cyan-100"
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           onSubmit={handleSubmit}
         >
           <div>
-            <label className="block text-left text-cyan-300 font-medium">
+            <label className="block text-left text-cyan-300 font-medium mb-1">
               Name
             </label>
             <input
@@ -126,7 +125,7 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label className="block text-left text-cyan-300 font-medium">
+            <label className="block text-left text-cyan-300 font-medium mb-1">
               Email
             </label>
             <input
@@ -138,7 +137,7 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label className="block text-left text-cyan-300 font-medium">
+            <label className="block text-left text-cyan-300 font-medium mb-1">
               Message
             </label>
             <textarea
