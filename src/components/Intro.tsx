@@ -19,7 +19,10 @@ export default function Intro() {
   }, []);
 
   return (
-    <section className="relative flex flex-col-reverse md:flex-row justify-around items-center h-screen w-full mx-auto">
+    <section
+      id="home"
+      className="relative flex flex-col-reverse md:flex-row justify-around items-center h-screen w-full mx-auto"
+    >
       {" "}
       {/* Background */}{" "}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />{" "}
