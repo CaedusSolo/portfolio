@@ -9,10 +9,11 @@ export default function Skills() {
     { icon: "devicon-nextjs-plain colored", label: "Next.js" },
     { icon: "devicon-express-original", label: "Express" },
     { icon: "devicon-tailwindcss-original colored", label: "TailwindCSS" },
+    { icon: "devicon-bootstrap-plain colored", label: "Bootstrap" },
     { icon: "devicon-python-plain colored", label: "Python" },
     { icon: "devicon-flask-original colored", label: "Flask" },
     { icon: "devicon-fastapi-plain colored", label: "FastAPI" },
-    { icon: "devicon-cplusplus-plain colored", label: "C++" },
+    { icon: "devicon-cplusplus-plain", label: "C++" },
     { icon: "devicon-git-plain colored", label: "Git" },
     { icon: "devicon-supabase-plain colored", label: "Supabase" },
     { icon: "devicon-firebase-plain colored", label: "Firebase" },
@@ -20,7 +21,6 @@ export default function Skills() {
     { icon: "devicon-sqlite-plain colored", label: "SQLite" },
     { icon: "devicon-wordpress-plain", label: "WordPress" },
     { icon: "devicon-figma-plain colored", label: "Figma" },
-    { icon: "devicon-bootstrap-plain colored", label: "Bootstrap" },
     { icon: "devicon-neovim-plain colored", label: "Neovim" },
   ];
 
@@ -48,7 +48,7 @@ export default function Skills() {
             <div
               key={index}
               className="flex flex-col items-center justify-center p-4 rounded-xl 
-              bg-slate-800/50 shadow-md hover:shadow-cyan-400/40 
+              bg-gray-700 shadow-md hover:shadow-cyan-400/40 
               transition-all duration-200"
             >
               <i
