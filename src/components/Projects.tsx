@@ -4,14 +4,14 @@ const projects = [
   {
     title: "CodeNection Website",
     description:
-      "The official website for CodeNection 2025, organized by IT Society MMU. Built with WordPress.",
+      "Official website for CodeNection 2025 by IT Society MMU. Built with WordPress.",
     image: "/images/codenection.png",
     link: "https://itsocietymmu.com/codenection-2025/",
   },
   {
     title: "Take Flight CLI",
     description:
-      "A CLI-based boilerplate generator that supports popular web frameworks and libraries, with built-in auth and database templates. Built with Node.js. Available as an NPM package.",
+      "CLI boilerplate generator supporting popular frameworks with built-in auth templates.",
     image: "/images/takeFlight.png",
     link: "https://www.npmjs.com/package/take-flight-cli",
   },
@@ -25,7 +25,7 @@ const projects = [
   {
     title: "Vimulator",
     description:
-      "A simple web-based minigame for practicing basic Vim motion commands. Built using React with Node.js backend.",
+      "Web-based minigame for practicing basic Vim motion commands. React & Node.js.",
     image: "/images/vimulator.png",
     link: "https://vimulator.netlify.app/",
   },
@@ -39,53 +39,33 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="relative w-full mx-auto py-16 sm:py-20 px-4 sm:px-6 lg:px-20 flex flex-col justify-center items-center gap-y-12 sm:gap-y-16"
-    >
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
-
-      {/* Heading */}
-      <h1
-        className="text-center font-extrabold text-3xl sm:text-4xl md:text-6xl tracking-tight 
-        leading-tight md:leading-[1.2] 
-        bg-purple-500 
-        bg-clip-text text-transparent"
-      >
+    <section id="projects" className="w-full max-w-7xl mx-auto px-6 py-20">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-12">
         Featured Projects
-      </h1>
+      </h2>
 
-      {/* Project Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 w-full max-w-7xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <a
             key={index}
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col rounded-2xl overflow-hidden 
-              bg-black/40 border border-cyan-400/20 backdrop-blur-sm 
-              shadow-[0_0_20px_rgba(0,255,255,0.15)] 
-              hover:shadow-[0_0_30px_rgba(0,255,255,0.35)] 
-              transition-all duration-300 transform hover:scale-[1.02]"
+            className="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
           >
-            {/* Image */}
-            <div className="relative w-full h-40 sm:h-52 md:h-60">
+            <div className="relative w-full h-48 overflow-hidden bg-slate-100 dark:bg-slate-800">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
-
-            {/* Content Below Image */}
-            <div className="p-5 flex flex-col gap-2">
-              <h3 className="text-xl sm:text-2xl font-semibold text-cyan-300 drop-shadow-lg">
+            <div className="p-6 flex flex-col flex-grow">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                 {project.title}
               </h3>
-              <p className="text-sm sm:text-base text-gray-300 group-hover:text-gray-100 transition-colors">
+              <p className="mt-3 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                 {project.description}
               </p>
             </div>
