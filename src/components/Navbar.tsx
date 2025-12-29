@@ -34,98 +34,75 @@ export default function Navbar() {
       anchors.forEach((a) => a.removeEventListener("click", onClick));
   }, [closeMenu]);
 
-  // Close on Escape (mobile)
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeMenu();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [closeMenu]);
-
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 z-50 bg-gray-900/90 backdrop-blur-md shadow-xl">
+      <nav className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex h-16 items-center justify-between">
+            {/* Brand */}
             <Link
               href="#home"
-              className="text-2xl font-extrabold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent  nav-link"
+              className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 nav-link"
             >
               YT
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden md:flex items-center space-x-8 text-sm sm:text-base lg:text-lg font-medium">
-              <Link
-                href="#about"
-                className="nav-link text-gray-300 hover:text-white transition"
-              >
-                About
-              </Link>
-              <Link
-                href="#education"
-                className="nav-link text-gray-300 hover:text-white transition"
-              >
-                Education
-              </Link>
-              <Link
-                href="#projects"
-                className="nav-link text-gray-300 hover:text-white transition"
-              >
-                Projects
-              </Link>
-              <Link
-                href="#skills"
-                className="nav-link text-gray-300 hover:text-white transition"
-              >
-                Skills
-              </Link>
-              <Link
-                href="#contact"
-                className="nav-link text-gray-300 hover:text-white transition"
-              >
-                Contact
-              </Link>
+            <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
+              {[
+                ["About", "#about"],
+                ["Education", "#education"],
+                ["Projects", "#projects"],
+                ["Skills", "#skills"],
+                ["Contact", "#contact"],
+              ].map(([label, href]) => (
+                <Link
+                  key={label}
+                  href={href}
+                  className="nav-link text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white transition-colors"
+                >
+                  {label}
+                </Link>
+              ))}
               <a
                 href="/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white transition"
+                className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors shadow-sm"
               >
-                Resume/CV
+                Resume
               </a>
             </div>
 
             {/* Mobile toggle */}
             <button
-              className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              aria-controls="mobile-nav"
-              aria-expanded={open}
+              className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none"
               onClick={() => setOpen((v) => !v)}
             >
               <span className="sr-only">Open main menu</span>
               <svg
                 className={`h-6 w-6 ${open ? "hidden" : "block"}`}
-                viewBox="0 0 24 24"
                 fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
                 stroke="currentColor"
               >
                 <path
-                  strokeWidth="2"
                   strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
               <svg
                 className={`h-6 w-6 ${open ? "block" : "hidden"}`}
-                viewBox="0 0 24 24"
                 fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
                 stroke="currentColor"
               >
                 <path
-                  strokeWidth="2"
                   strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
@@ -134,55 +111,36 @@ export default function Navbar() {
         </div>
 
         {/* Mobile panel */}
-        <div
-          id="mobile-nav"
-          className={`md:hidden overflow-hidden border-t border-white/10 ${
-            open ? "block" : "hidden"
-          }`}
-        >
-          <div className="space-y-1 px-4 pb-4 pt-2 text-base font-medium">
-            <Link
-              href="#about"
-              className="nav-link block rounded-md px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition"
-            >
-              About
-            </Link>
-            <Link
-              href="#education"
-              className="nav-link block rounded-md px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition"
-            >
-              Education
-            </Link>
-            <Link
-              href="#projects"
-              className="nav-link block rounded-md px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#skills"
-              className="nav-link block rounded-md px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition"
-            >
-              Skills
-            </Link>
-            <Link
-              href="#contact"
-              className="nav-link block rounded-md px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition"
-            >
-              Contact
-            </Link>
-            <a
-              href="/Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="block rounded-md px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition"
-            >
-              Resume/CV
-            </a>
+        {open && (
+          <div className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+            <div className="space-y-1 px-4 py-4">
+              {[
+                ["About", "#about"],
+                ["Education", "#education"],
+                ["Projects", "#projects"],
+                ["Skills", "#skills"],
+                ["Contact", "#contact"],
+              ].map(([label, href]) => (
+                <Link
+                  key={label}
+                  href={href}
+                  className="nav-link block rounded-md px-3 py-2 text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400"
+                >
+                  {label}
+                </Link>
+              ))}
+              <a
+                href="/Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="block mt-4 text-center rounded-md bg-indigo-600 px-3 py-2 text-base font-medium text-white hover:bg-indigo-700"
+              >
+                Resume
+              </a>
+            </div>
           </div>
-        </div>
+        )}
       </nav>
-
       <div className="h-16" />
     </>
   );

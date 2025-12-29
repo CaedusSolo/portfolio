@@ -27,39 +27,24 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative w-full mx-auto px-8 md:px-20 flex flex-col justify-center items-center py-20 gap-y-16"
+      className="w-full max-w-7xl mx-auto px-6 py-20 bg-slate-50/50 dark:bg-slate-900/50"
     >
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-[-2]" />
-
-      {/* Heading */}
-      <h1
-        className="text-center font-extrabold text-5xl md:text-6xl tracking-tight 
-        bg-purple-500 bg-clip-text text-transparent md:leading-[1.2] 
-        "
-      >
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-12">
         Skills
-      </h1>
+      </h2>
 
-      {/* Grid of skill cards */}
-      <div className="w-full mx-auto pb-6">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 sm:gap-10 lg:gap-12 text-center">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center p-4 rounded-xl 
-              bg-gray-700 shadow-md hover:shadow-cyan-400/40 
-              transition-all duration-200"
-            >
-              <i
-                className={`${skill.icon} text-6xl sm:text-7xl lg:text-8xl mb-3`}
-              ></i>
-              <p className="text-sm md:text-base text-slate-300 font-medium">
-                {skill.label}
-              </p>
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-indigo-200 dark:hover:border-indigo-900 transition-all duration-200"
+          >
+            <i className={`${skill.icon} text-5xl mb-4`}></i>
+            <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
+              {skill.label}
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   );
