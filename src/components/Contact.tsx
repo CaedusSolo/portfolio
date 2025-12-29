@@ -57,8 +57,7 @@ export default function Contact() {
             </h3>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
               I’m interested in freelance opportunities, internships, and
-              networking. However, if you have other request or question, don’t
-              hesitate to use the form.
+              networking. Drop a message and let's connect!
             </p>
           </div>
 
@@ -140,7 +139,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3.5 rounded-lg bg-indigo-600 text-white font-bold text-lg hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500/20 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full py-3.5 rounded-lg bg-indigo-600 cursor-pointer text-white font-bold text-lg hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500/20 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>

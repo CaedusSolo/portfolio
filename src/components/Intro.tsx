@@ -9,7 +9,7 @@ export default function Intro() {
   const [showH3, setShowH3] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowName(true), 500); // Sped up for snappier feel
+    const timer = setTimeout(() => setShowName(true), 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -55,8 +55,9 @@ export default function Intro() {
         </div>
 
         <p className="mt-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg mx-auto md:mx-0">
-          Software Engineering student passionate about building clean,
-          efficient web applications and exploring new technologies.
+          Computer Science student specializing in software engineering,
+          passionate about building clean, efficient web applications and
+          exploring new technologies.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
