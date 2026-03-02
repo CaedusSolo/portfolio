@@ -7,14 +7,14 @@ export default function Timeline() {
       title: "Bachelor of Computer Science",
       place: "Multimedia University",
       details:
-        "Specialized in Software Engineering, focusing on web development and AI.",
+        "Specialized in Software Engineering, focusing on web development. Serving as Vice President at IT Society MMU.",
     },
     {
       year: "2023 - 2024",
       title: "Foundation in IT",
       place: "Multimedia University",
       details:
-        "Studied fundamentals of programming, data structures, and mathematics.",
+        "Studied fundamentals of programming and mathematics.",
     },
     {
       year: "2018 - 2023",
