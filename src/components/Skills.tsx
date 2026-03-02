@@ -10,18 +10,18 @@ export default function Skills() {
     { icon: "devicon-express-original", label: "Express" },
     { icon: "devicon-tailwindcss-original colored", label: "TailwindCSS" },
     { icon: "devicon-bootstrap-plain colored", label: "Bootstrap" },
+    { icon: "devicon-ruby-plain colored", label: "Ruby" },
+    { icon: "devicon-rails-plain colored", label: "Ruby on Rails" },
     { icon: "devicon-python-plain colored", label: "Python" },
     { icon: "devicon-flask-original colored", label: "Flask" },
     { icon: "devicon-fastapi-plain colored", label: "FastAPI" },
     { icon: "devicon-cplusplus-plain", label: "C++" },
     { icon: "devicon-git-plain colored", label: "Git" },
     { icon: "devicon-supabase-plain colored", label: "Supabase" },
-    { icon: "devicon-firebase-plain colored", label: "Firebase" },
-    { icon: "devicon-sqlalchemy-plain", label: "SQLAlchemy" },
+    { icon: "devicon-postgresql-plain", label: "PostgreSQL" },
     { icon: "devicon-sqlite-plain colored", label: "SQLite" },
     { icon: "devicon-wordpress-plain", label: "WordPress" },
     { icon: "devicon-figma-plain colored", label: "Figma" },
-    { icon: "devicon-neovim-plain colored", label: "Neovim" },
   ];
 
   return (
