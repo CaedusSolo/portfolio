@@ -2,18 +2,24 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "CodeNection Website",
-    description:
-      "Official website for CodeNection 2025 by IT Society MMU. Built with WordPress.",
-    image: "/images/codenection.png",
-    link: "https://itsocietymmu.com/codenection-2025/",
+    title: "ProPro",
+    description: "A website where students submit their project proposals to supervisors, and supervisors may approve or reject the proposal, and record progress updates for approved projects. Used by 400+ students and lecturers. Used by 400+ students and lecturers.",
+    image: "/images/propro.png",
+    link: "https://propro.click",
   },
   {
-    title: "Take Flight CLI",
+    title: "Hacktrack MMU",
     description:
-      "CLI boilerplate generator supporting popular frameworks with built-in auth templates.",
-    image: "/images/takeFlight.png",
-    link: "https://www.npmjs.com/package/take-flight-cli",
+     "A website where Hackerspace executives manage the details of members and store their IdeaTalks/ProgressTalks related to the projects that they worked on. Built a scalable, rate-limit-safe background worker system to batch-process row updates to sync to Google Sheets",
+    image: "/images/hacktrack.png",
+    link: "https://hacktrackmmuv2.vercel.app/",
+  },
+  {
+    title: "CodeNection 2025 Website",
+    description:
+      "Official website for CodeNection 2025 by IT Society MMU. Built with WordPress, peaking at 3000+ monthly visitors, viewed over 9000 times in total.",
+    image: "/images/codenection.png",
+    link: "https://itsocietymmu.com/codenection-2025-archive/",
   },
   {
     title: "Well of Wisdom",
@@ -23,17 +29,11 @@ const projects = [
     link: "https://caedussolo.pythonanywhere.com/views/home",
   },
   {
-    title: "Vimulator",
+    title: "Take Flight CLI",
     description:
-      "Web-based minigame for practicing basic Vim motion commands. React & Node.js.",
-    image: "/images/vimulator.png",
-    link: "https://vimulator.netlify.app/",
-  },
-  {
-    title: "Quizzical",
-    description: "A quizzical style web app, built with React and Express.js.",
-    image: "/images/quizzical.png",
-    link: "https://quizzical-with-react-cyt.netlify.app/",
+      "CLI boilerplate generator supporting popular frameworks with built-in auth templates.",
+    image: "/images/takeFlight.png",
+    link: "https://www.npmjs.com/package/take-flight-cli",
   },
 ];
 
