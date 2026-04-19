@@ -3,14 +3,14 @@ import Image from "next/image";
 const projects = [
   {
     title: "ProPro",
-    description: "A website where students submit their project proposals to supervisors, and supervisors may approve or reject the proposal, and record progress updates for approved projects. Used by 400+ students and lecturers. Used by 400+ students and lecturers.",
+    description: "A website where students submit their project proposals to supervisors, and supervisors may approve or reject the proposal, and record progress updates for approved projects. Used by 400+ students and lecturers.",
     image: "/images/propro.png",
     link: "https://propro.click",
   },
   {
     title: "Hacktrack MMU",
     description:
-     "A website where Hackerspace executives manage the details of members and store their IdeaTalks/ProgressTalks related to the projects that they worked on. Built a scalable, rate-limit-safe background worker system to batch-process row updates to sync to Google Sheets",
+     "A website where Hackerspace executives manage the details of members and store their IdeaTalks/ProgressTalks related to the projects that they worked on. Built a scalable, rate-limit-safe background worker system to batch-process row updates to sync to Google Sheets. Added features like allowing executives to edit updates, meetups and projects of members.",
     image: "/images/hacktrack.png",
     link: "https://hacktrackmmuv2.vercel.app/",
   },
