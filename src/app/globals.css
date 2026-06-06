@@ -1,13 +1,48 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-mono: "Geist Mono", monospace;
+  
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+}
+
+:root {
+  --brand-primary: #4f46e5; /* indigo-600 */
+  --brand-secondary: #06b6d4; /* cyan-500 */
+}
+
+.dark {
+  --brand-primary: #818cf8; /* indigo-400 */
+  --brand-secondary: #22d3ee; /* cyan-400 */
 }
 
 html,
 body {
-  @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300;
+  @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300;
+}
+
+/* Premium dotted/grid grid pattern */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+}
+
+.dark .grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(51, 65, 85, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.15) 1px, transparent 1px);
+}
+
+/* Subtle glow effects */
+.glow-spot {
+  @apply absolute rounded-full blur-3xl opacity-20 dark:opacity-30 pointer-events-none;
+  background: radial-gradient(circle, var(--brand-primary) 0%, transparent 70%);
 }
 
 ::-webkit-scrollbar {
@@ -19,5 +54,23 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-300 dark:bg-slate-700 rounded-full hover:bg-slate-400 dark:hover:bg-slate-600;
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full hover:bg-slate-400 dark:hover:bg-slate-700;
 }
+
+/* Monochromatic devicons by default, colorized on hover */
+#skills i[class*="devicon-"].colored {
+  color: currentColor !important;
+  transition: color 0.3s ease;
+}
+
+#skills .group:hover i[class*="devicon-"].colored {
+  color: revert !important;
+}
+
+/* Fix visibility of black brand logos in dark mode on hover */
+.dark #skills .group:hover i.devicon-nextjs-plain.colored,
+.dark #skills .group:hover i.devicon-express-original.colored {
+  color: #f8fafc !important; /* slate-50 */
+}
+
+
