@@ -69,7 +69,8 @@ body {
 
 /* Fix visibility of black brand logos in dark mode on hover */
 .dark #skills .group:hover i.devicon-nextjs-plain.colored,
-.dark #skills .group:hover i.devicon-express-original.colored {
+.dark #skills .group:hover i.devicon-express-original.colored,
+.dark #skills .group:hover i.devicon-vercel-original.colored {
   color: #f8fafc !important; /* slate-50 */
 }
 

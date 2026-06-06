@@ -13,6 +13,7 @@ export default function Skills() {
         { icon: "devicon-python-plain colored", label: "Python" },
         { icon: "devicon-cplusplus-plain colored", label: "C++" },
         { icon: "devicon-ruby-plain colored", label: "Ruby" },
+        { icon: "devicon-java-plain colored", label: "Java" },
       ],
     },
     {
@@ -37,6 +38,7 @@ export default function Skills() {
         { icon: "devicon-postgresql-plain colored", label: "PostgreSQL" },
         { icon: "devicon-supabase-plain colored", label: "Supabase" },
         { icon: "devicon-sqlite-plain colored", label: "SQLite" },
+        { icon: "devicon-spring-original colored", label: "Spring Boot" },
       ],
     },
     {
@@ -44,7 +46,9 @@ export default function Skills() {
       icon: Settings,
       skills: [
         { icon: "devicon-git-plain colored", label: "Git" },
-        { icon: "devicon-figma-plain colored", label: "Figma" },
+        { icon: "devicon-heroku-original colored", label: "Heroku" },
+        { icon: "devicon-vercel-original colored", label: "Vercel" },
+        { icon: "devicon-google-plain colored", label: "Google Apps Script" },
         { icon: "devicon-wordpress-plain colored", label: "WordPress" },
       ],
     },
