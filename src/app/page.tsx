@@ -42,7 +42,7 @@ export default function Home() {
           <div className="intro-copy">
             <p>I study Computer Science at MMU Cyberjaya, where I focus on software engineering and building useful things for the web.</p>
             <p>I am passionate about solving real-world problems with technology.</p>
-            <p>Outside the classroom, I&apos;m involved with IT Society MMU and enjoy working with people who care about technology and community.</p>
+            <p>Outside the classroom, I&apos;m involved with IT Society MMU Cyberjaya and enjoy working with people who care about technology and community.</p>
           </div>
         </section>
 

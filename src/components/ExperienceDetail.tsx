@@ -25,6 +25,18 @@ export default function ExperienceDetail({ experience, category }: Props) {
             <ul className="detail-tags">{experience.tools.map((tool) => <li key={tool}>{tool}</li>)}</ul>
           </section>
         )}
+        {experience.supplementalLinks && (
+          <section className="detail-section" aria-labelledby="detail-related-links">
+            <h2 id="detail-related-links">Related links</h2>
+            <ul className="supplemental-links">
+              {experience.supplementalLinks.map((link) => (
+                <li key={link.url}>
+                  <a href={link.url} target="_blank" rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </main>
       <footer className="site-footer detail-footer">
         <Link href={sectionHref}>← All {category.toLowerCase()} experience</Link>

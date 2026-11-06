@@ -2,6 +2,10 @@
 period: March 2025 - November 2025
 role: Head of Technical Division
 organization: CodeNection
+order: 3
+supplementalLinks:
+  - label: CodeNection 2025 Website
+    url: https://itsocietymmu.com/codenection-2025-archive/
 tools:
   - Leadership
   - Inter-division communication
