@@ -53,6 +53,7 @@ h2 { margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -.025em; }
 .row-meta { padding-top: 3px; color: var(--subtle); font-size: 12px; line-height: 1.45; }
 h3 { margin-bottom: 5px; font-size: 15px; font-weight: 500; line-height: 1.5; }
 .list-row p { margin-bottom: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.project-row p { font-size: 14px; }
 .muted { color: var(--muted); }
 .project-row a:hover { color: var(--accent); }
 .project-row a span { margin-left: 3px; font-size: 13px; }

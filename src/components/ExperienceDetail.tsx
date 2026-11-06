@@ -21,7 +21,7 @@ export default function ExperienceDetail({ experience, category }: Props) {
         <article className="markdown-content"><ReactMarkdown>{experience.content}</ReactMarkdown></article>
         {experience.tools && (
           <section className="detail-section" aria-labelledby="detail-tools">
-            <h2 id="detail-tools">Areas &amp; tools</h2>
+            <h2 id="detail-tools">Skills</h2>
             <ul className="detail-tags">{experience.tools.map((tool) => <li key={tool}>{tool}</li>)}</ul>
           </section>
         )}

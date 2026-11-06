@@ -3,9 +3,8 @@ import Link from "next/link";
 import { volunteerExperiences, workExperiences } from "@/data/experiences";
 
 const projects = [
-  { name: "ProPro", type: "Web application", description: "[Add a short sentence about the problem, your role, and the outcome.]", href: "https://propro.click" },
-  { name: "Hacktrack MMU", type: "Web application", description: "[Add a short sentence about what you built and who uses it.]", href: "https://hacktrackmmuv2.vercel.app/" },
-  { name: "CodeNection 2025", type: "Event website", description: "[Add a short sentence about the project and your contribution.]", href: "https://itsocietymmu.com/codenection-2025-archive/" },
+  { name: "Hacktrack MMU", type: "Web application", description: "Internal record-keeping system used at Hackerspace MMU. I designed and implemented a zero-touch member registration pipeline using Google Apps Script, eliminating manual data entry. I also implemented an automated, self-working data update pipeline that syncs member data across a PostgreSQL database and Google Sheets, ensuring data consistency.", href: "/volunteer/hackerspace-developer" },
+  { name: "ProPro", type: "Web application", description: "Project proposal and progress tracking system. Used by over 1000 students and lecturers in my university. I redesigned the UI to have a more modern and professional look. I also help develop new features and fix bugs.", href: "https://propro.click" }
 ];
 
 const links = [
@@ -22,9 +21,8 @@ export default function Home() {
         <nav className="site-nav" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#work">Work</a>
-          <a href="#volunteer">Volunteer</a>
           <a href="#projects">Projects</a>
-          <a href="#writing">Writing</a>
+          <a href="#volunteer">Volunteer</a>
           <a href="#connect">Connect</a>
         </nav>
       </header>
@@ -59,7 +57,7 @@ export default function Home() {
         </section>
 
         <section className="content-section" id="projects" aria-labelledby="projects-title">
-          <div className="section-heading"><h2 id="projects-title">Selected projects</h2><span className="section-index">02 / 05</span></div>
+          <div className="section-heading"><h2 id="projects-title">Selected projects</h2></div>
           <div className="simple-list">
             {projects.map((project) => (
               <article className="list-row project-row" key={project.name}>
@@ -83,14 +81,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="content-section" id="writing" aria-labelledby="writing-title">
-          <div className="section-heading"><h2 id="writing-title">Writing &amp; notes</h2><span className="section-index">04 / 05</span></div>
-          <p className="section-intro">A place for things I&apos;m learning, making, and thinking about.</p>
-          <div className="simple-list"><div className="list-row"><span className="row-meta">[Date]</span><div><h3>[Your first article or note]</h3><p>[Add a short description and link when it is ready.]</p></div></div></div>
-        </section>
-
         <section className="content-section connect-section" id="connect" aria-labelledby="connect-title">
-          <div className="section-heading"><h2 id="connect-title">Connect</h2><span className="section-index">05 / 05</span></div>
+          <div className="section-heading"><h2 id="connect-title">Connect</h2></div>
           <p className="section-intro">Have a project, opportunity, or just want to say hello? I&apos;d love to hear from you.</p>
           <div className="social-links">
             {links.map((link) => (
