@@ -23,7 +23,7 @@ Currently, I'm serving as the Vice President of Goal Execution at IT Society MMU
 I made the decision to abolish the Marketing division, after observing its lackluster impact from the previous term. I redistributed marketing duties to Multimedia and Public Relations: Multimedia would be in charge of content creation and Public Relations would deal with any external partnerships with other organizations.
 
 ## Strengthening the Society's Online Presence
-I introduced the initiative of regular blog updates on [our website](https://itsocietymmu.com/blogs) and recap reels on [our Instagram](https://instagram.com/itsocietymmu) as a way to document our events and activities. I wanted our activities to leave a lasting record, beyond the day of the event itself.
+I doubled down on the initiative of regular blog updates on [our website](https://itsocietymmu.com/blogs) and recap reels on [our Instagram](https://instagram.com/itsocietymmu) as a way to document our events and activities. I wanted our activities to leave a lasting record, beyond the day of the event itself.
 
 ## Overseeing Major Events
 I served as advisor for Tech Career Days and CodeNection, both of which are IT Society's flagship events. I mainly provided guidance and direction to the committees when they needed it, but I mostly left the execution details to them. 

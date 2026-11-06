@@ -30,9 +30,9 @@ My involvement came in a push to modernize and streamline Hackerspace's existing
 Prior to this, Hackerspace had a problem where data was stored in two places: a Ruby on Rails backend hosted on Heroku, and a Google Sheets spreadsheet. This made keeping both sources in sync with each other extremely difficult, as it was too much of a hassle to update both sources at the same time. As a result, data was constantly out of sync.
 
 ### My Solution
-I slowly unified the data shared between the two data sources. For data where the spreadsheet is accurate, I carefully overwrote the existing, outdated data in Hacktrack, and vice versa. Of course,  was done with explicit approval from Hackerspace executives and its founder. 
+I slowly unified the data shared between the two data sources. For data where the spreadsheet is accurate, I carefully overwrote the existing, outdated data in Hacktrack, and vice versa. Of course, everything was done with explicit approval from Hackerspace executives and its founder. 
 
-All data manipulations were done through a Ruby script, with exhaustive local testing conducted before executing it on production.
+All data manipulations were done through a Ruby script, with exhaustive testing conducted locally before executing it on production.
 
 ### Outcome and Impact
 All member data was preserved and data was identical across both Hacktrack and spreadsheet. No more "Hacktrack says X, spreadsheet says Y".
